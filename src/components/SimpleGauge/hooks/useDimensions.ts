@@ -28,7 +28,7 @@ export function useDimensions(gaugeContainer: React.RefObject<HTMLDivElement>, b
     const { width, height } = getDimensions();
     setWidth(width);
     setHeight(height);
-  }, [gaugeContainer, isTotal, barWidth]);
+  }, [gaugeContainer.current, isTotal, barWidth]);
 
   return { width, height };
 }
